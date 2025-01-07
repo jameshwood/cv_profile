@@ -1,0 +1,71 @@
+.tech-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  margin-top: 1rem;
+}
+
+.tech-item {
+  text-align: center;
+  background-color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.tech-item img {
+  width: 100px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.tech-item p {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #dcdcdc;
+}
+
+.tech-logo {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 0.5rem;
+}
+
+.tech-item:hover {
+  transform: scale(1.05);
+}
+
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.skill-item {
+  background-color: #1e1e1e;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #444;
+  transition: transform 0.2s;
+}
+
+.skill-item:hover {
+  transform: scale(1.05);
+  background-color: #2d2d2d;
+}
+
+.skill-item img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.skill-item p {
+  margin: 0;
+  color: #dcdcdc;
+  font-family: 'Fira Code', monospace;
+}

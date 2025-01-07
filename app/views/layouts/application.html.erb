@@ -11,14 +11,16 @@
   </head>
 
   <body class="bg-dark text-white">
-       <div class="d-flex" style="height: 100vh;">
-          <!-- Sidebar -->
-          <div class="bg-secondary px-3 py-4" style="width: 250px;">
-              <h5 class="text-white">
-                <a href="#" data-action="click->tabs#showTab" data-tab-id="landing" class="text-decoration-none text-white">
-                  James Wood
-                </a>
-              </h5>
+    <div class="d-flex flex-column min-vh-100">
+      <!-- Sidebar and Main Content -->
+      <div class="d-flex flex-grow-1">
+        <!-- Sidebar -->
+        <div class="bg-secondary px-3 py-4" style="width: 250px;">
+          <h5 class="text-white">
+            <a href="#" data-action="click->tabs#showTab" data-tab-id="landing" class="text-decoration-none text-white">
+              James Wood
+            </a>
+          </h5>
             <ul class="list-unstyled mt-4" data-controller="tabs">
               <!-- About Section -->
               <li>
@@ -70,9 +72,24 @@
             </ul>
           </div>
       <!-- Main Content -->
-      <div class="flex-grow-1">
+      <div class="flex-grow-1 main-content">
         <%= yield %>
       </div>
     </div>
-  </body>
+
+    <!-- Footer -->
+    <footer>
+      <p class="mb-2">Find me on:</p>
+      <a href="https://github.com/your-username" class="icon-link" target="_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://twitter.com/your-username" class="icon-link" target="_blank">
+        <i class="fa-brands fa-twitter"></i>
+      </a>
+      <a href="https://linkedin.com/in/your-username" class="icon-link" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+    </footer>
+  </div>
+</body>
 </html>

@@ -1,0 +1,97 @@
+/* Code editor wrapper */
+.code-editor-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 8px;
+  font-family: "Fira Code", monospace;
+  color: #dcdcdc;
+  border: 1px solid #444;
+}
+
+
+.code-editor-header {
+  background-color: #2d2d2d;
+  padding: 0.5rem 1rem;
+  border-radius: 8px 8px 0 0;
+}
+
+.file-name {
+  color: #58a6ff; /* Light blue for file name */
+  font-weight: bold;
+}
+
+
+
+.code-comment {
+  color: #7d8799;
+  font-style: italic;
+}
+
+.code-string {
+  color: #ce9178; /* Orange-like string color */
+}
+
+.code-keyword {
+  color: #c586c0; /* Purple-like color for keywords */
+}
+
+.code-function {
+  color: #61afef; /* Light blue for function names */
+}
+
+.code-variable {
+  color: #d19a66; /* Brown for variables */
+}
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar adjustments */
+.sidebar {
+  width: 250px;
+  min-width: 200px;
+  max-width: 300px;
+  padding: 1rem;
+  background-color: #2d2d2d;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+@media screen and (max-width: 768px) {
+  .d-flex {
+    flex-direction: column; /* Sidebar and content stack vertically */
+  }
+
+  .sidebar {
+    width: 100%; /* Sidebar takes full width */
+    max-width: 100%;
+  }
+
+  .code-editor-wrapper {
+    width: 100%; /* Code editor takes full width */
+  }
+}
+
+pre.code-block {
+  white-space: pre-wrap; /* Allow text wrapping */
+  word-break: break-word;
+  flex-direction: column; /* Ensures lines are stacked properly */
+  padding: 0; /* Remove extra padding */
+  margin: 0;
+}
+
+
+.line-number {
+  color: #6c757d;
+  width: 2rem; /* Fixed width for line numbers */
+  text-align: right;
+  user-select: none;
+}
+
+

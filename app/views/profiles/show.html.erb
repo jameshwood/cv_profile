@@ -7,11 +7,27 @@
   </a>
 </div>
 
-<!-- About Section -->
+<!-- About Me Code Snippet Style -->
 <div data-tab-target="about" class="d-none">
-  <h3>// About Me</h3>
-  <p>Hello! I’m James Wood, a web developer passionate about coding.</p>
+  <h2 class="d-none">About Me</h2>
+  <div class="code-editor-wrapper">
+    <div class="code-editor-header">
+      <span class="file-name">// about_me.js</span>
+    </div>
+    <pre class="code-block">
+    <code class="language-js">
+      <span class="line-number">1</span> // Hello! I'm James Wood, a passionate developer. <br>
+      <span class="line-number">2</span> <span class="code-comment">// After 4 years in startups, I discovered my passion for backend development...</span><br>
+      <span class="line-number">3</span> <span class="code-comment">// Before the bootcamp:</span> I contributed to building a platform with robust payments and API integrations alongside a CTO.<br>
+      <span class="line-number">4</span> <span class="code-keyword">const</span> <span class="code-variable">finalProject</span> = <span class="code-string">"Personalised content-ranking algorithm for streaming platforms"</span>;<br>
+      <span class="line-number">5</span> <span class="code-keyword">const</span> <span class="code-variable">customGPTs</span> = <span class="code-string">"Developed custom GPTs for business efficiency and to enhance learning/coding capabilities"</span>;<br>
+      <span class="line-number">6</span> <span class="code-comment">// Passion:</span> <span class="code-string">"Backend development and system design with the plan to move in to blockchain development"</span><br>
+      <span class="line-number">7</span> <span class="code-function">console.</span>log</span>(<span class="code-string">"Driven by curiosity and continuous learning, I strive to build impactful, elegant systems both in teams and personal projects."</span>);
+    </code>
+  </pre>
+  </div>
 </div>
+
 
 <!-- Education -->
 <div data-tab-target="newcastle" class="d-none">
@@ -36,15 +52,82 @@
 <!-- Tech Stack -->
 <div data-tab-target="frontend" class="d-none">
   <h3>// Frontend</h3>
-  <p>Technologies: React, Vue, HTML, CSS</p>
+  <div class="tech-grid">
+    <div class="tech-item">
+      <%= image_tag "HTML.png", alt: "HTML Logo", class: "tech-logo" %>
+      <p>HTML</p>
+    </div>
+    <div class="tech-item">
+      <%= image_tag "CSS.png", alt: "CSS Logo", class: "tech-logo" %>
+      <p>CSS</p>
+    </div>
+    <div class="tech-item">
+      <%= image_tag "JavaScript.png", alt: "JavaScript Logo", class: "tech-logo" %>
+      <p>JavaScript</p>
+    </div>
+    <div class="tech-item">
+      <%= image_tag "bootstrap.png", alt: "Bootstrap Logo", class: "tech-logo" %>
+      <p>Bootstrap</p>
+    </div>
+  </div>
 </div>
 <div data-tab-target="backend" class="d-none">
   <h3>// Backend</h3>
-  <p>Technologies: Ruby on Rails, Node.js, PostgreSQL</p>
+  <div class="tech-grid">
+    <div class="tech-item">
+      <%= image_tag "rails.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Ruby on Rails</p>
+    </div>
+    <div class="tech-item">
+      <%= image_tag "python.png", alt: "Phython Logo", class: "tech-logo" %>
+      <p>Python</p>
+    </div>
+    <div class="tech-item">
+      <%= image_tag "postgresql.png", alt: "Postgresql Logo", class: "tech-logo" %>
+      <p>PostgreSQL</p>
+    </div>
+    <div class="tech-item">
+      <%= image_tag "sql.png", alt: "SQL Logo", class: "tech-logo" %>
+      <p>SQL</p>
+    </div>
+    <div class="tech-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Ruby</p>
+    </div>
+  </div>
 </div>
 <div data-tab-target="skills" class="d-none">
   <h3>// Skills</h3>
-  <p>Soft Skills: Teamwork, Communication, Time Management</p>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Microsoft Excel</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Logical Processing</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>GPT prompt engineering and agent design</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Critical Thinking</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Leadership</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Communication</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+      <p>Strategic Thinking</p>
+    </div>
+  </div>
 </div>
 
 <!-- Projects -->
