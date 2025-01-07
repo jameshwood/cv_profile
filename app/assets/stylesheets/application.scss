@@ -12,5 +12,76 @@
 @import "pages/index";
 
 body {
-  background-color: #2a2a2a;
+  font-family: 'Fira Code', monospace;
 }
+
+.bg-secondary {
+  background-color: #1e1e1e !important;
+}
+
+
+textarea {
+  background-color: #1e1e1e;
+  color: white;
+  border: 1px solid #444;
+}
+
+.nav-link {
+  cursor: pointer;
+  padding: 5px 10px;
+  font-family: 'Fira Code', monospace;
+}
+
+.active-tab {
+  background-color: #1e1e1e;
+  color: #58a6ff !important;
+  border-left: 4px solid #58a6ff;
+}
+
+.dropdown-header {
+  font-size: 1rem;
+  color: #ccc;
+  cursor: pointer;
+}
+
+ul.list-unstyled li a:hover {
+  background-color: #2d2d2d;
+  border-left: 4px solid #61dafb;
+}
+
+pre, .editor-body {
+  font-family: 'Source Code Pro', monospace;
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+}
+
+.text-info {
+  color: #569cd6;
+}
+
+.text-warning {
+  color: #dcdcaa;
+}
+
+.text-success {
+  color: #6a9955;
+}
+
+.text-primary {
+  color: #9cdcfe;
+}
+
+[data-tab-target="dropdown"].show {
+  display: block !important;
+}
+
+.nav-link.active-tab {
+  background-color: #1e1e1e;
+  color: #58a6ff !important;
+  border-left: 4px solid #58a6ff;
+}
+
+

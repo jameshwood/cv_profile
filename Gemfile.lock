@@ -189,6 +189,7 @@ GEM
       racc (~> 1.4)
     nokogiri (1.18.1-x86_64-linux-musl)
       racc (~> 1.4)
+    openai (0.3.0)
     pg (1.5.9)
     popper_js (2.11.8)
     psych (5.2.2)
@@ -312,6 +313,7 @@ DEPENDENCIES
   font-awesome-sass (~> 6.1)
   importmap-rails
   jbuilder
+  openai (~> 0.3.0)
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.5)

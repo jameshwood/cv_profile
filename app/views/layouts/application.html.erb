@@ -10,7 +10,69 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="bg-dark text-white">
+       <div class="d-flex" style="height: 100vh;">
+          <!-- Sidebar -->
+          <div class="bg-secondary px-3 py-4" style="width: 250px;">
+              <h5 class="text-white">
+                <a href="#" data-action="click->tabs#showTab" data-tab-id="landing" class="text-decoration-none text-white">
+                  James Wood
+                </a>
+              </h5>
+            <ul class="list-unstyled mt-4" data-controller="tabs">
+              <!-- About Section -->
+              <li>
+                <a href="#" data-action="click->tabs#showTab" data-tab-id="about" class="nav-link text-white">About Me</a>
+              </li>
+
+              <!-- Education Dropdown -->
+              <li>
+                <span class="nav-link text-white" data-action="click->tabs#toggleDropdown">Education</span>
+                <ul class="list-unstyled ms-3 d-none" data-tab-target="dropdown">
+                  <li><span data-action="click->tabs#showTab" data-tab-id="newcastle" class="nav-link text-white">Newcastle University</span></li>
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="lewagon" class="nav-link text-white">Le Wagon</a></li>
+                </ul>
+              </li>
+
+              <!-- Experience Section -->
+              <li>
+                <span class="nav-link text-white" data-action="click->tabs#toggleDropdown">Experience</span>
+                <ul class="list-unstyled ms-3 d-none" data-tab-target="dropdown">
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="work1" class="nav-link text-white">Job 1</a></li>
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="work2" class="nav-link text-white">Job 2</a></li>
+                </ul>
+              </li>
+
+              <!-- Tech Stack -->
+              <li>
+                <span class="nav-link text-white" data-action="click->tabs#toggleDropdown">Tech Stack & Skills</span>
+                <ul class="list-unstyled ms-3 d-none" data-tab-target="dropdown">
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="frontend" class="nav-link text-white">Frontend</a></li>
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="backend" class="nav-link text-white">Backend</a></li>
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="skills" class="nav-link text-white">Skills</a></li>
+                </ul>
+              </li>
+
+              <!-- Projects -->
+              <li>
+                <a href="#" data-action="click->tabs#showTab" data-tab-id="projects" class="nav-link text-white">Projects</a>
+              </li>
+
+              <!-- GPT Playground -->
+              <li>
+                <a href="#" data-action="click->tabs#showTab" data-tab-id="gpt" class="nav-link text-white">GPT Playground</a>
+              </li>
+
+              <!-- Contact -->
+              <li>
+                <a href="#" data-action="click->tabs#showTab" data-tab-id="contact" class="nav-link text-white">Contact</a>
+              </li>
+            </ul>
+          </div>
+      <!-- Main Content -->
+      <div class="flex-grow-1">
+        <%= yield %>
+      </div>
+    </div>
   </body>
 </html>
