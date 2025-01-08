@@ -133,11 +133,12 @@
 
 .small-skill-item {
   background-color: #1e1e1e;
-  padding: 15px;
+  padding: 30px;
   text-align: center;
   border-radius: 8px;
   border: 1px solid #444;
   transition: transform 0.2s;
+  max-height: fit-content;
 }
 
 .small-skill-item:hover {
