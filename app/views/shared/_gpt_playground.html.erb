@@ -1,0 +1,18 @@
+<div data-controller="chat" class="console-container">
+  <div class="console-header">James Wood Console</div>
+
+  <!-- Chat Output -->
+  <div class="chat-output border p-3 mb-3" data-chat-target="output" style="background-color: black; color: white; height: 400px; overflow-y: scroll; font-family: 'Courier New', monospace;">
+    <!-- Messages will be appended here -->
+  </div>
+
+  <!-- Input Form -->
+  <form data-chat-target="form" data-action="submit->chat#submit">
+    <input type="text" data-chat-target="input" placeholder="Type your message here..." class="form-control mb-2 console-input" style="background-color: black; color: white; border: 1px solid white; font-family: 'Courier New', monospace;">
+    <button type="submit" class="btn btn-warning w-100">Send</button>
+  </form>
+</div>
+
+
+
+ 

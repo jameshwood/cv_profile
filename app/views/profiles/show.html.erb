@@ -30,68 +30,258 @@
 
 
 <!-- Education -->
-<div data-tab-target="newcastle" class="d-none">
-  <h3>// Newcastle University</h3>
-  <p>Bachelor’s in Computer Science</p>
-</div>
-<div data-tab-target="lewagon" class="d-none">
-  <h3>// Le Wagon Bootcamp</h3>
-  <p>Full-Stack Web Development (Ruby, Rails, JavaScript)</p>
+<div data-tab-target="education" class="d-none">
+  <div class="education-grid">
+    <div class="education-item">
+      <%= image_tag "bradfield.png", alt: "Bradfield Logo", class: "education-logo" %>
+      <p>Bradfield College</p>
+      <p> 2011 - 2013 </p>
+      <p> Economics (A) | Maths (B) | Business Studies (B) </p>
+    </div>
+    <div class="education-item">
+      <%= image_tag "newcastle.png", alt: "Newcastle Logo", class: "education-logo" %>
+      <p>Newcastle University</p>
+      <p> 2014 - 2018 </p>
+      <p> BA Contemporary and Popular Music</p>
+    </div>
+    <div class="education-item">
+      <%= image_tag "lewagon.png", alt: "Le Wagon Logo", class: "education-logo" %>
+      <p>Le Wagon</p>
+      <p> 2024 </p>
+      <p> Fullstack Web Development Bootcamp </p>
+    </div>
+  </div>
 </div>
 
 <!-- Experience -->
 <div data-tab-target="work1" class="d-none">
-  <h3>// Experience - Job 1</h3>
-  <p>Worked as a Frontend Developer...</p>
+  <div class="experience-container">
+    <!-- Console-style text -->
+    <div class="console-text">
+      <h3>// Freelance</h3>
+      <div class="console-output">
+        <p class="console-line"><span class="prompt">➜</span> cd Freelance</p>
+        <p class="console-line"><span class="prompt">➜</span> cat summary.txt</p>
+        <p class="console-line output">// Worked as a technical consultant and developer for various projects...</p>
+        <p class="console-line output">// Key achievements:</p>
+        <p class="console-line output">  - Designed and built complex Excel documents to enhance business efficiency.</p>
+        <p class="console-line output">  - Developed custom GPT-based tools tailored to client needs.</p>
+        <p class="console-line output">  - Provided consulting services for solar farm projects, advising on optimization strategies.</p>
+        <p class="console-line output">  - Built optimization tools for identifying ideal solar farm locations.</p>
+      </div>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="small-skills-grid">
+      <div class="small-skill-item">
+        <%= image_tag "excel.png", alt: "Excel Logo", class: "skill-logo" %>
+        <p>Microsoft Excel</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "logical.png", alt: "Logical Logo", class: "skill-logo" %>
+        <p>Logical Processing</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "openai.png", alt: "OpenAI Logo", class: "skill-logo" %>
+        <p>GPT / OpenAI</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "financial_modelling.png", alt: "Financial Modelling Logo", class: "skill-logo" %>
+        <p>Financial Modelling</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "JavaScript.png", alt: "JavaScript Logo", class: "skill-logo" %>
+        <p>JavaScript</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "HTML.png", alt: "HTML Logo", class: "skill-logo" %>
+        <p>HTML</p>
+      </div>
+    </div>
+  </div>
 </div>
+
 <div data-tab-target="work2" class="d-none">
-  <h3>// Experience - Job 2</h3>
-  <p>Worked as a Backend Developer...</p>
+  <div class="experience-container">
+    <!-- Console-style text -->
+    <div class="console-text">
+      <h3>// Whistler Blackcomb</h3>
+      <div class="console-output">
+        <p class="console-line"><span class="prompt">➜</span> cd Whistler-Blackcomb</p>
+        <p class="console-line"><span class="prompt">➜</span> cat summary.txt</p>
+        <p class="console-line output">// Worked as a Ski Instructor at Whistler Blackcomb, delivering personalized lessons to individuals of all ages.</p>
+        <p class="console-line output">// Key achievements:</p>
+        <p class="console-line output">  - Developed exceptional people management and communication skills.</p>
+        <p class="console-line output">  - Effectively taught and guided both beginners and advanced skiers.</p>
+        <p class="console-line output">  - Strengthened my ability to manage teams and engage with diverse age groups in professional settings.</p>
+      </div>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="small-skills-grid">
+      <div class="small-skill-item">
+        <%= image_tag "leadership.png", alt: "Leadership Logo", class: "skill-logo" %>
+        <p>Leadership</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "communication.png", alt: "Communication Logo", class: "skill-logo" %>
+        <p>Communication</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "sales.png", alt: "Sales Logo", class: "skill-logo" %>
+        <p>Sales</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div data-tab-target="work3" class="d-none">
+  <div class="experience-container">
+    <!-- Console-style text -->
+    <div class="console-text">
+      <h3>// Volta Solutions</h3>
+      <div class="console-output">
+        <p class="console-line"><span class="prompt">➜</span> cd Volta-Solutions</p>
+        <p class="console-line"><span class="prompt">➜</span> role COO | Co-Founder </p>
+        <p class="console-line"><span class="prompt">➜</span> cat summary.txt</p>
+        <p class="console-line output">// Co-founded Volta Solutions with my business partner to provide innovative solutions for clients.</p>
+        <p class="console-line output">// Key achievements:</p>
+        <p class="console-line output">  - Created and automated a sophisticated savings forecasting document that increased efficiency by 60%.</p>
+        <p class="console-line output">  - Successfully brought Ocado on as a key client, contributing to significant business growth.</p>
+        <p class="console-line output">  - Developed and maintained the company website and handled email account administration.</p>
+        <p class="console-line output">  - Managed supplier relationships, back-office operations, and financial accounts while driving sales strategy.</p>
+      </div>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="small-skills-grid">
+      <div class="small-skill-item">
+        <%= image_tag "sales.png", alt: "Sales Logo", class: "skill-logo" %>
+        <p>Sales</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "operations.png", alt: "Operations Logo", class: "skill-logo" %>
+        <p>Operations</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "financial_modelling.png", alt: "Financial Modelling Logo", class: "skill-logo" %>
+        <p>Financial Modelling</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "business_dev.png", alt: "Business Dev Logo", class: "skill-logo" %>
+        <p>Business Development</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "leadership.png", alt: "Leadership Logo", class: "skill-logo" %>
+        <p>Leadership</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "communication.png", alt: "Communication Logo", class: "skill-logo" %>
+        <p>Communication</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "strategic.png", alt: "Strategic Logo", class: "skill-logo" %>
+        <p>Strategic Thinking</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "excel.png", alt: "Excel Logo", class: "skill-logo" %>
+        <p>Microsoft Excel</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "openai.png", alt: "OpenAI Logo", class: "skill-logo" %>
+        <p>GPT / OpenAI</p>
+      </div>
+    </div>
+</div>
+</div>
+
+<div data-tab-target="work4" class="d-none">
+  <div class="experience-container">
+    <!-- Console-style text -->
+    <div class="console-text">
+      <h3>// Lief</h3>
+      <div class="console-output">
+        <p class="console-line"><span class="prompt">➜</span> cd Lief</p>
+        <p class="console-line"><span class="prompt">➜</span> role COO | Co-Founder </p>
+        <p class="console-line"><span class="prompt">➜</span> cat summary.txt</p>
+        <p class="console-line output">// Co-Founder of Lief, responsible for driving strategy and ensuring seamless communication across departments.</p>
+        <p class="console-line output">// Key contributions:</p>
+        <p class="console-line output">  - Played a pivotal role in defining the business strategy and vision.</p>
+        <p class="console-line output">  - Managed financial modelling, compliance documents, and business plans.</p>
+        <p class="console-line output">  - Established and managed strategic partnerships to drive growth and collaboration.</p>
+        <p class="console-line output">  - Collaborated with the development team on logic-based decisions to enhance platform performance.</p>
+        <p class="console-line output">  - Worked with development team to develop a sophisticated payments system using Stripe Connected Accounts and created all compliance documents to meet regulatory requirements.</p>
+        <p class="console-line output">  - Contributed to the successful development and of Lief's revolutionary charity fundraising platform.</p>
+        <p class="console-line output">  - Built custom GPTs to automate the creation of long-form documents, including terms and conditions, compliance documents, and business plans.</p>
+      </div>
+    </div>
+
+    <!-- Skills Grid -->
+    <div class="small-skills-grid">
+      <div class="small-skill-item">
+        <img src="/assets/images/react.png" alt="React">
+        <p>React</p>
+      </div>
+      <div class="small-skill-item">
+        <img src="/assets/images/css.png" alt="CSS">
+        <p>CSS</p>
+      </div>
+      <div class="small-skill-item">
+        <img src="/assets/images/bootstrap.png" alt="Bootstrap">
+        <p>Bootstrap</p>
+      </div>
+      <div class="small-skill-item">
+        <img src="/assets/images/javascript.png" alt="JavaScript">
+        <p>JavaScript</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!-- Tech Stack -->
 <div data-tab-target="frontend" class="d-none">
   <h3>// Frontend</h3>
-  <div class="tech-grid">
-    <div class="tech-item">
-      <%= image_tag "HTML.png", alt: "HTML Logo", class: "tech-logo" %>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <%= image_tag "HTML.png", alt: "HTML Logo", class: "skill-logo" %>
       <p>HTML</p>
     </div>
-    <div class="tech-item">
-      <%= image_tag "CSS.png", alt: "CSS Logo", class: "tech-logo" %>
+    <div class="skill-item">
+      <%= image_tag "CSS.png", alt: "CSS Logo", class: "skill-logo" %>
       <p>CSS</p>
     </div>
-    <div class="tech-item">
-      <%= image_tag "JavaScript.png", alt: "JavaScript Logo", class: "tech-logo" %>
+    <div class="skill-item">
+      <%= image_tag "JavaScript.png", alt: "JavaScript Logo", class: "skill-logo" %>
       <p>JavaScript</p>
     </div>
-    <div class="tech-item">
-      <%= image_tag "bootstrap.png", alt: "Bootstrap Logo", class: "tech-logo" %>
+    <div class="skill-item">
+      <%= image_tag "bootstrap.png", alt: "Bootstrap Logo", class: "skill-logo" %>
       <p>Bootstrap</p>
     </div>
   </div>
 </div>
 <div data-tab-target="backend" class="d-none">
   <h3>// Backend</h3>
-  <div class="tech-grid">
-    <div class="tech-item">
-      <%= image_tag "rails.png", alt: "Ruby Logo", class: "tech-logo" %>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <%= image_tag "rails.png", alt: "Ruby Logo", class: "skill-logo" %>
       <p>Ruby on Rails</p>
     </div>
-    <div class="tech-item">
-      <%= image_tag "python.png", alt: "Phython Logo", class: "tech-logo" %>
+    <div class="skill-item">
+      <%= image_tag "python.png", alt: "Phython Logo", class: "skill-logo" %>
       <p>Python</p>
     </div>
-    <div class="tech-item">
-      <%= image_tag "postgresql.png", alt: "Postgresql Logo", class: "tech-logo" %>
+    <div class="skill-item">
+      <%= image_tag "postgresql.png", alt: "Postgresql Logo", class: "skill-logo" %>
       <p>PostgreSQL</p>
     </div>
-    <div class="tech-item">
-      <%= image_tag "sql.png", alt: "SQL Logo", class: "tech-logo" %>
+    <div class="skill-item">
+      <%= image_tag "sql.png", alt: "SQL Logo", class: "skill-logo" %>
       <p>SQL</p>
     </div>
-    <div class="tech-item">
-      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "tech-logo" %>
+    <div class="skill-item">
+      <%= image_tag "ruby.png", alt: "Ruby Logo", class: "skill-logo" %>
       <p>Ruby</p>
     </div>
   </div>
@@ -100,28 +290,52 @@
   <h3>// Skills</h3>
   <div class="skills-grid">
     <div class="skill-item">
-      <%= image_tag "excel.png", alt: "Excel Logo", class: "tech-logo" %>
+      <%= image_tag "excel.png", alt: "Excel Logo", class: "skill-logo" %>
       <p>Microsoft Excel</p>
     </div>
     <div class="skill-item">
-      <%= image_tag "logical.png", alt: "Logical Logo", class: "tech-logo" %>
+      <%= image_tag "logical.png", alt: "Logical Logo", class: "skill-logo" %>
       <p>Logical Processing</p>
     </div>
     <div class="skill-item">
-      <%= image_tag "openai.png", alt: "OpenAI Logo", class: "tech-logo" %>
-      <p>GPT prompt engineering and agent design</p>
+      <%= image_tag "openai.png", alt: "OpenAI Logo", class: "skill-logo" %>
+      <p>GPT / OpenAI</p>
     </div>
     <div class="skill-item">
-      <%= image_tag "leadership.png", alt: "Leadership Logo", class: "tech-logo" %>
+      <%= image_tag "leadership.png", alt: "Leadership Logo", class: "skill-logo" %>
       <p>Leadership</p>
     </div>
     <div class="skill-item">
-      <%= image_tag "communication.png", alt: "Communication Logo", class: "tech-logo" %>
+      <%= image_tag "communication.png", alt: "Communication Logo", class: "skill-logo" %>
       <p>Communication</p>
     </div>
     <div class="skill-item">
-      <%= image_tag "strategic.png", alt: "Strategic Logo", class: "tech-logo" %>
+      <%= image_tag "strategic.png", alt: "Strategic Logo", class: "skill-logo" %>
       <p>Strategic Thinking</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "business_dev.png", alt: "Business Dev Logo", class: "skill-logo" %>
+      <p>Business Development</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "sales.png", alt: "Sales Logo", class: "skill-logo" %>
+      <p>Sales</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "compliance.png", alt: "Compliance Logo", class: "skill-logo" %>
+      <p>Compliance</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "operations.png", alt: "Operations Logo", class: "skill-logo" %>
+      <p>Operations</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "financial_modelling.png", alt: "Financial Modelling Logo", class: "skill-logo" %>
+      <p>Financial Modelling</p>
+    </div>
+    <div class="skill-item">
+      <%= image_tag "Strategic_partners.png", alt: "Strategic Partnerships Logo", class: "skill-logo" %>
+      <p>Strategic Partnerships</p>
     </div>
   </div>
 </div>
@@ -134,9 +348,9 @@
 
 <!-- GPT Playground -->
 <div data-tab-target="gpt" class="d-none">
-  <h3>// GPT Playground</h3>
-  <textarea class="form-control" rows="5" placeholder="Write something..."></textarea>
-  <button class="btn btn-primary mt-3" data-action="click->tabs#sendGPTRequest">Send to GPT</button>
+  <div class="my-5">
+    <%= render 'shared/gpt_playground' %>
+  </div>
 </div>
 
 <!-- Contact -->

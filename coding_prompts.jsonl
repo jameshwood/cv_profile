@@ -1,0 +1,429 @@
+{ "prompts": [
+  {
+    "prompt": "How do you define a Ruby method to calculate the square of a number?",
+    "completion": "```ruby\ndef square(num)\n  num ** 2\nend\n\nputs square(4)  # Output: 16\n```"
+  },
+  {
+    "prompt": "How do you create a Bootstrap button with different colors for various actions (primary, danger, success)?",
+    "completion": "```html\n<a href=\"#\" class=\"btn btn-primary\">Primary</a>\n<a href=\"#\" class=\"btn btn-danger\">Danger</a>\n<a href=\"#\" class=\"btn btn-success\">Success</a>\n```"
+  },
+  {
+    "prompt": "How do you connect a Stimulus.js controller to a div element?",
+    "completion": "```html\n<div data-controller=\"example\">\n  <button data-action=\"example#log\">Click Me</button>\n</div>\n\n// app/javascript/controllers/example_controller.js\nimport { Controller } from \"@hotwired/stimulus\"\n\nexport default class extends Controller {\n  log() {\n    console.log(\"Button clicked!\")\n  }\n}\n```"
+  },
+  {
+    "prompt": "How do you geocode an address using the Geocoder gem in Rails?",
+    "completion": "```ruby\n# Gemfile\ngem \"geocoder\"\n\n# app/models/flat.rb\nclass Flat < ApplicationRecord\n  geocoded_by :address\n  after_validation :geocode, if: :will_save_change_to_address?\nend\n\n# Add latitude and longitude columns:\nrails g migration AddCoordinatesToFlats latitude:float longitude:float\nrails db:migrate\n```"
+  },
+  {
+    "prompt": "How do you use an SQL INNER JOIN to retrieve doctor information along with their specialties?",
+    "completion": "```sql\nSELECT doctors.name, specialties.name\nFROM doctors\nINNER JOIN specialties ON doctors.specialty_id = specialties.id;\n```"
+  },
+  {
+    "prompt": "How do you add a `rating` column to a `restaurants` table?",
+    "completion": "```bash\nrails g migration AddRatingToRestaurants rating:integer\nrails db:migrate\n```"
+  },
+  {
+    "prompt": "How do you create and enqueue a background job using ActiveJob?",
+    "completion": "```ruby\nrails generate job example_job\n\n# app/jobs/example_job.rb\nclass ExampleJob < ApplicationJob\n  queue_as :default\n\n  def perform\n    puts \"Executing background job\"\n  end\nend\n\n# To run:\nExampleJob.perform_later  # Runs asynchronously\n```"
+  },
+  {
+    "prompt": "How do you send a POST request using the Fetch API?",
+    "completion": "```javascript\nfetch(\"https://example.com/api/data\", {\n  method: \"POST\",\n  headers: {\n    \"Content-Type\": \"application/json\"\n  },\n  body: JSON.stringify({ name: \"John\", age: 30 })\n})\n.then(response => response.json())\n.then(data => console.log(data))\n.catch(error => console.error(\"Error:\", error));\n```"
+  },
+  {
+    "prompt": "How do you display markers on a Mapbox map using Stimulus.js?",
+    "completion": "```javascript\nconnect() {\n  this.map = new mapboxgl.Map({\n    container: this.element,\n    style: \"mapbox://styles/mapbox/streets-v10\"\n  });\n  this.#addMarkers();\n}\n\n#addMarkers() {\n  this.markersValue.forEach((marker) => {\n    new mapboxgl.Marker()\n      .setLngLat([marker.lng, marker.lat])\n      .addTo(this.map);\n  });\n}\n```"
+  },
+  {
+    "prompt": "How do you retrieve restaurants with 5-star ratings within 10 km of a specific location?",
+    "completion": "```sql\nSELECT *\nFROM restaurants\nWHERE rating = 5\nAND ST_DistanceSphere(\n  POINT(latitude, longitude), POINT(48.8566, 2.3522)\n) <= 10000;\n```"
+  },
+  {
+    "prompt": "How do you use Simple Form to create a styled form with Bootstrap classes?",
+    "completion": "```erb\n<%= simple_form_for(@restaurant) do |f| %>\n  <%= f.input :name %>\n  <%= f.input :address %>\n  <%= f.input :rating, as: :select, collection: 1..5 %>\n  <%= f.submit \"Save\", class: \"btn btn-primary\" %>\n<% end %>\n```"
+  },
+  {
+    "prompt": "How do you manually trigger garbage collection and measure memory usage in Ruby?",
+    "completion": "```ruby\nGC.start\nputs \"Memory used: #{`ps -o rss= -p #{Process.pid}`.to_i / 1024} MB\"\n```"
+  },
+  {
+    "prompt": "How do you create an index for faster searches on the `email` column in the `users` table?",
+    "completion": "```sql\nCREATE INDEX index_users_on_email ON users(email);\n```"
+  },
+  {
+    "prompt": "How do you run tasks in parallel using Python’s `concurrent.futures`?",
+    "completion": "```python\nfrom concurrent.futures import ThreadPoolExecutor\n\ndef task(name):\n    print(f\"Running {name}\")\n\nwith ThreadPoolExecutor(max_workers=3) as executor:\n    executor.map(task, ['Task1', 'Task2', 'Task3'])\n```"
+  },
+  {
+    "prompt": "How do you avoid the N+1 query issue when fetching posts and their associated comments?",
+    "completion": "```ruby\n# Avoid N+1 by using `includes`\n@posts = Post.includes(:comments).all\n```"
+  },
+  {
+    "prompt": "How do you create a nested resource in Rails for comments under posts?",
+    "completion": "```ruby\n# config/routes.rb\nresources :posts do\n  resources :comments, only: [:create, :destroy]\nend\n```"
+  },
+  {
+    "prompt": "How do you implement input validation in Simple Form for a non-empty username?",
+    "completion": "```ruby\n# app/models/user.rb\nclass User < ApplicationRecord\n  validates :username, presence: true\nend\n\n# app/views/users/_form.html.erb\n<%= simple_form_for(@user) do |f| %>\n  <%= f.input :username %>\n  <%= f.submit \"Submit\" %>\n<% end %>\n```"
+  },
+  {
+    "prompt": "How do you use AJAX to update a part of the page without refreshing?",
+    "completion": "```javascript\ndocument.querySelector('#my-form').addEventListener('submit', function(event) {\n  event.preventDefault();\n  fetch('/submit', {\n    method: 'POST',\n    body: new FormData(this)\n  })\n  .then(response => response.text())\n  .then(html => {\n    document.querySelector('#results').innerHTML = html;\n  });\n});\n```"
+  },
+  {
+    "prompt": "How do you define an association in Rails where a restaurant has many reviews?",
+    "completion": "```ruby\nclass Restaurant < ApplicationRecord\n  has_many :reviews, dependent: :destroy\nend\n\nclass Review < ApplicationRecord\n  belongs_to :restaurant\nend\n```"
+  },
+  {
+    "prompt": "How do you pass data from Rails controller to JavaScript via Stimulus values?",
+    "completion": "```erb\n<div data-controller=\"example\" data-example-name-value=\"<%= @name %>\">\n</div>\n\n// app/javascript/controllers/example_controller.js\nimport { Controller } from \"@hotwired/stimulus\";\nexport default class extends Controller {\n  static values = { name: String };\n  connect() {\n    console.log(`Hello, ${this.nameValue}!`);\n  }\n}\n```"
+  },
+  {
+    "prompt": "How do you use Python's requests library to fetch JSON data from an API?",
+    "completion": "```python\nimport requests\nresponse = requests.get('https://api.example.com/data')\nif response.status_code == 200:\n    data = response.json()\n    print(data)\n```"
+  },
+  {
+    "prompt": "How do you display validation errors in a Rails form using Simple Form?",
+    "completion": "```erb\n<%= simple_form_for(@user) do |f| %>\n  <% if @user.errors.any? %>\n    <div class=\"alert alert-danger\">\n      <h4>\n        <%= pluralize(@user.errors.count, \"error\") %> prohibited this user from being saved:\n      </h4>\n      <ul>\n        <% @user.errors.full_messages.each do |message| %>\n          <li><%= message %></li>\n        <% end %>\n      </ul>\n    </div>\n  <% end %>\n  <%= f.input :username %>\n  <%= f.input :email %>\n  <%= f.submit \"Register\" %>\n<% end %>\n```"
+  }
+  {
+    "prompt": "How do you set up a background job in Rails to perform a time-consuming task such as sending emails?",
+    "completion": "```ruby
+    # Gemfile
+    gem 'sidekiq'
+
+    # config/application.rb
+    class Application < Rails::Application
+      config.active_job.queue_adapter = :sidekiq
+    end
+
+    # Generate the job
+    rails g job send_email
+
+    # app/jobs/send_email_job.rb
+    class SendEmailJob < ApplicationJob
+      queue_as :default
+
+      def perform(user_id)
+        user = User.find(user_id)
+        UserMailer.welcome_email(user).deliver_now
+        puts \"Email sent to #{user.email}\"
+      end
+    end
+
+    # To enqueue the job
+    SendEmailJob.perform_later(user.id)
+    ```"
+  },
+  {
+    "prompt": "How do you create a Rails Active Record migration to add latitude and longitude columns for geocoding?",
+    "completion": "```ruby
+    # Terminal command
+    rails g migration AddCoordinatesToLocations latitude:float longitude:float
+
+    # db/migrate/xxxxx_add_coordinates_to_locations.rb
+    class AddCoordinatesToLocations < ActiveRecord::Migration[7.0]
+      def change
+        add_column :locations, :latitude, :float
+        add_column :locations, :longitude, :float
+      end
+    end
+
+    # Run the migration
+    rails db:migrate
+    ```"
+  },
+  {
+    "prompt": "How do you configure a Stimulus.js controller to display a Mapbox map with markers?",
+    "completion": "```javascript
+    // app/javascript/controllers/map_controller.js
+    import { Controller } from '@hotwired/stimulus';
+    import mapboxgl from 'mapbox-gl';
+
+    export default class extends Controller {
+      static values = { apiKey: String, markers: Array };
+
+      connect() {
+        mapboxgl.accessToken = this.apiKeyValue;
+
+        this.map = new mapboxgl.Map({
+          container: this.element,
+          style: 'mapbox://styles/mapbox/streets-v11'
+        });
+
+        this.#addMarkersToMap();
+        this.#fitMapToMarkers();
+      }
+
+      #addMarkersToMap() {
+        this.markersValue.forEach((marker) => {
+          new mapboxgl.Marker()
+            .setLngLat([marker.lng, marker.lat])
+            .addTo(this.map);
+        });
+      }
+
+      #fitMapToMarkers() {
+        const bounds = new mapboxgl.LngLatBounds();
+        this.markersValue.forEach(marker => bounds.extend([marker.lng, marker.lat]));
+        this.map.fitBounds(bounds, { padding: 50, maxZoom: 14 });
+      }
+    }
+
+    // Example HTML:
+    // <div data-controller="map" data-map-api-key-value="your-mapbox-token" data-map-markers-value='[{"lat": 48.8566, "lng": 2.3522}]'></div>
+    ```"
+  },
+  {
+    "prompt": "How do you use Active Record associations to link a doctor and their patients in Rails?",
+    "completion": "```ruby
+    # db/migrate/create_doctors_and_patients.rb
+    class CreateDoctorsAndPatients < ActiveRecord::Migration[7.0]
+      def change
+        create_table :doctors do |t|
+          t.string :name
+          t.timestamps
+        end
+
+        create_table :patients do |t|
+          t.string :name
+          t.references :doctor, foreign_key: true
+          t.timestamps
+        end
+      end
+    end
+
+    # app/models/doctor.rb
+    class Doctor < ApplicationRecord
+      has_many :patients, dependent: :destroy
+    end
+
+    # app/models/patient.rb
+    class Patient < ApplicationRecord
+      belongs_to :doctor
+    end
+    ```"
+  },
+  {
+    "prompt": "How do you write a JavaScript fetch request to POST form data and handle JSON responses?",
+    "completion": "```javascript
+    const form = document.querySelector('#my-form');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      const formData = new FormData(form);
+      const requestBody = Object.fromEntries(formData.entries());
+
+      const response = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(requestBody)
+      });
+
+      const responseData = await response.json();
+      console.log('Response:', responseData);
+    });
+
+    // Example HTML:
+    // <form id="my-form">
+    //   <input name="username" placeholder="Enter username">
+    //   <input type="submit" value="Submit">
+    // </form>
+    ```"
+  }
+  {
+    "prompt": "How do you implement a Rails feature that fetches weather data from an external API and displays it in the view using AJAX?",
+    "completion": "```ruby
+# Gemfile
+gem 'http'
+
+# app/controllers/weather_controller.rb
+class WeatherController < ApplicationController
+  def fetch_weather
+    city = params[:city]
+    response = HTTP.get(\"https://api.openweathermap.org/data/2.5/weather?q=#{city}&appid=YOUR_API_KEY\")
+    if response.status.success?
+      render json: response.parse, status: :ok
+    else
+      render json: { error: 'Failed to fetch weather data' }, status: :unprocessable_entity
+    end
+  end
+end
+
+# config/routes.rb
+Rails.application.routes.draw do
+  get '/weather', to: 'weather#fetch_weather'
+end
+
+// app/javascript/controllers/weather_controller.js
+import { Controller } from '@hotwired/stimulus';
+
+export default class extends Controller {
+  static targets = ['output'];
+
+  async fetchWeather(event) {
+    event.preventDefault();
+    const city = document.querySelector('#city-input').value;
+
+    const response = await fetch(`/weather?city=${city}`);
+    if (response.ok) {
+      const data = await response.json();
+      this.outputTarget.textContent = `Temperature: ${data.main.temp}°C, Description: ${data.weather[0].description}`;
+    } else {
+      this.outputTarget.textContent = 'Error fetching weather data.';
+    }
+  }
+}
+
+// Corresponding HTML:
+// <form data-controller="weather" data-action="submit->weather#fetchWeather">
+//   <input id="city-input" type="text" placeholder="Enter city">
+//   <button type="submit">Get Weather</button>
+// </form>
+// <div data-weather-target="output"></div>
+```"
+  },
+  {
+    "prompt": "How do you create a Stimulus.js controller to add infinite scroll pagination to a list of posts?",
+    "completion": "```javascript
+// app/javascript/controllers/infinite_scroll_controller.js
+import { Controller } from '@hotwired/stimulus';
+
+export default class extends Controller {
+  static targets = ['list'];
+
+  connect() {
+    window.addEventListener('scroll', this.loadMore.bind(this));
+  }
+
+  disconnect() {
+    window.removeEventListener('scroll', this.loadMore.bind(this));
+  }
+
+  async loadMore() {
+    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 200) {
+      const nextPageUrl = this.data.get('nextPage');
+      if (!nextPageUrl) return;
+
+      const response = await fetch(nextPageUrl);
+      if (response.ok) {
+        const html = await response.text();
+        this.listTarget.insertAdjacentHTML('beforeend', html);
+        // Update the next page URL or remove it if there are no more pages
+        const newNextPageUrl = document.querySelector('[data-next-page]').dataset.nextPage;
+        this.data.set('nextPage', newNextPageUrl || '');
+      }
+    }
+  }
+}
+
+// Example HTML:
+// <div data-controller="infinite-scroll" data-infinite-scroll-next-page-value="/posts?page=2">
+//   <ul data-infinite-scroll-target="list">
+//     <!-- Posts will be dynamically appended here -->
+//   </ul>
+// </div>
+```"
+  },
+  {
+    "prompt": "How do you implement user authentication in Rails using Devise?",
+    "completion": "```bash
+# Add Devise to the Gemfile
+gem 'devise'
+
+# Install the gem
+bundle install
+
+# Run the Devise generator
+rails generate devise:install
+
+# Generate the User model
+rails generate devise User
+
+# Run migrations
+rails db:migrate
+
+# Add authentication before filters in controllers
+class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
+end
+
+# Example routes and view usage:
+# <%= link_to 'Log in', new_user_session_path %>
+# <%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+```"
+  },
+  {
+    "prompt": "How do you create a Rails route and controller to handle a nested resource for reviews under products?",
+    "completion": "```ruby
+      # config/routes.rb
+      Rails.application.routes.draw do
+        resources :products do
+          resources :reviews, only: [:create, :destroy]
+        end
+      end
+
+      # app/controllers/reviews_controller.rb
+      class ReviewsController < ApplicationController
+        before_action :set_product
+
+        def create
+          @review = @product.reviews.new(review_params)
+          if @review.save
+            redirect_to @product, notice: 'Review added successfully.'
+          else
+            redirect_to @product, alert: 'Failed to add review.'
+          end
+        end
+
+        def destroy
+          @review = @product.reviews.find(params[:id])
+          @review.destroy
+          redirect_to @product, notice: 'Review deleted.'
+        end
+
+        private
+
+        def set_product
+          @product = Product.find(params[:product_id])
+        end
+
+        def review_params
+          params.require(:review).permit(:content, :rating)
+        end
+      end
+      ```"
+  },
+  {
+    "prompt": "How do you configure Bootstrap 5 utility classes to create a responsive grid layout for cards?",
+    "completion": "```html
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="image1.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+            <div class="card">
+              <img src="image2.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Another card title</h5>
+                <p class="card-text">More example text for the card content.</p>
+                <a href="#" class="btn btn-primary">See details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      ```"
+  }
+]
+}
