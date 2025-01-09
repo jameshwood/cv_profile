@@ -11,22 +11,38 @@ export default class extends Controller {
   async submit(event) {
     event.preventDefault();
 
+    const csrfToken = document.querySelector("[name='csrf-token']").content;  // Get CSRF token
     const prompt = this.inputTarget.value.trim();
     if (!prompt) return;
 
-    // Append user's message
+    // Append user's message to the chat console
     this.appendMessage("user", prompt);
-    this.inputTarget.value = "";  // Clear input
+    this.inputTarget.value = "";  // Clear the input field
 
-    // Send request to Rails API endpoint
-    const response = await fetch("/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt: prompt, persona: "james_wood" })
-    });
+    const typingIndicator = this.appendMessage("system", "James Wood is typing...");
 
-    const result = await response.json();
-    this.appendMessage("gpt", result.text);
+    try {
+      // Send POST request to /generate endpoint
+      const response = await fetch("/generate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "X-CSRF-Token": csrfToken  // CSRF token included here
+        },
+        body: JSON.stringify({ prompt: prompt })  // Send the prompt as JSON
+      });
+
+      if (!response.ok) {
+        throw new Error(`Server error: ${response.status} - ${response.statusText}`);
+      }
+
+      const result = await response.json();  // Parse the JSON response
+      this.appendMessage("gpt", result.text);  // Add GPT's response to the chat console
+
+    } catch (error) {
+      console.error("Error:", error);
+      this.appendMessage("system", "Something went wrong. Please try again or contact support.");
+    }
   }
 
   appendMessage(sender, content) {
@@ -42,6 +58,6 @@ export default class extends Controller {
     }
 
     this.outputTarget.appendChild(messageDiv);
-    this.outputTarget.scrollTop = this.outputTarget.scrollHeight;  // Scroll to the bottom
+    this.outputTarget.scrollTop = this.outputTarget.scrollHeight;  // Scroll to the bottom of the chat
   }
 }

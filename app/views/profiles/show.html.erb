@@ -58,7 +58,7 @@
   <div class="experience-container">
     <!-- Console-style text -->
     <div class="console-text">
-      <h3>// Freelance</h3>
+      <h3>// Freelance | 2018 - Present</h3>
       <div class="console-output">
         <p class="console-line"><span class="prompt">➜</span> cd Freelance</p>
         <p class="console-line"><span class="prompt">➜</span> cat summary.txt</p>
@@ -105,7 +105,7 @@
   <div class="experience-container">
     <!-- Console-style text -->
     <div class="console-text">
-      <h3>// Whistler Blackcomb</h3>
+      <h3>// Whistler Blackcomb | 2018 - 2020</h3>
       <div class="console-output">
         <p class="console-line"><span class="prompt">➜</span> cd Whistler-Blackcomb</p>
         <p class="console-line"><span class="prompt">➜</span> cat summary.txt</p>
@@ -139,7 +139,7 @@
   <div class="experience-container">
     <!-- Console-style text -->
     <div class="console-text">
-      <h3>// Volta Solutions</h3>
+      <h3>// Volta Solutions | 2020 - 2024</h3>
       <div class="console-output">
         <p class="console-line"><span class="prompt">➜</span> cd Volta-Solutions</p>
         <p class="console-line"><span class="prompt">➜</span> role COO | Co-Founder </p>
@@ -199,7 +199,7 @@
   <div class="experience-container">
     <!-- Console-style text -->
     <div class="console-text">
-      <h3>// Lief</h3>
+      <h3>// Lief World | 2021 - Present</h3>
       <div class="console-output">
         <p class="console-line"><span class="prompt">➜</span> cd Lief</p>
         <p class="console-line"><span class="prompt">➜</span> role COO | Co-Founder </p>
@@ -219,19 +219,51 @@
     <!-- Skills Grid -->
     <div class="small-skills-grid">
       <div class="small-skill-item">
-        <img src="/assets/images/react.png" alt="React">
-        <p>React</p>
+        <%= image_tag "openai.png", alt: "OpenAI Logo", class: "skill-logo" %>
+        <p>GPT / OpenAI</p>
       </div>
       <div class="small-skill-item">
-        <img src="/assets/images/css.png" alt="CSS">
-        <p>CSS</p>
+        <%= image_tag "leadership.png", alt: "Leadership Logo", class: "skill-logo" %>
+        <p>Leadership</p>
       </div>
       <div class="small-skill-item">
-        <img src="/assets/images/bootstrap.png" alt="Bootstrap">
-        <p>Bootstrap</p>
+        <%= image_tag "communication.png", alt: "Communication Logo", class: "skill-logo" %>
+        <p>Communication</p>
       </div>
       <div class="small-skill-item">
-        <img src="/assets/images/javascript.png" alt="JavaScript">
+        <%= image_tag "business_dev.png", alt: "Business Dev Logo", class: "skill-logo" %>
+        <p>Business Development</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "sales.png", alt: "Sales Logo", class: "skill-logo" %>
+        <p>Sales</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "compliance.png", alt: "Compliance Logo", class: "skill-logo" %>
+        <p>Compliance</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "operations.png", alt: "Operations Logo", class: "skill-logo" %>
+        <p>Operations</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "financial_modelling.png", alt: "Financial Modelling Logo", class: "skill-logo" %>
+        <p>Financial Modelling</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "Strategic_partners.png", alt: "Strategic Partnerships Logo", class: "skill-logo" %>
+        <p>Strategic Partnerships</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "logical.png", alt: "Logical Logo", class: "skill-logo" %>
+        <p>Logical Processing</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "excel.png", alt: "Excel Logo", class: "skill-logo" %>
+        <p>Microsoft Excel</p>
+      </div>
+      <div class="small-skill-item">
+        <%= image_tag "JavaScript.png", alt: "JavaScript Logo", class: "skill-logo" %>
         <p>JavaScript</p>
       </div>
     </div>
@@ -343,10 +375,38 @@
 <!-- Projects -->
 <div data-tab-target="projects" class="d-none">
   <h3>// Projects</h3>
-  <p>Here are some of my recent projects:</p>
+  <div class="projects-grid">
+    <!-- Project 1: Solar Farm Mapping System -->
+    <div class="project-item" onclick="showProjectModal('solar')">
+      <img src="solar-farm.png" alt="Solar Farm Mapping" class="project-logo">
+      <p>Solar Farm Mapping System</p>
+    </div>
+
+    <!-- Project 2: Pet Airbnb -->
+    <div class="project-item" onclick="showProjectModal('petbnb')">
+      <img src="pet-airbnb.png" alt="Pet Rental Project" class="project-logo">
+      <p>Petbnb - Pet Rental Platform</p>
+    </div>
+
+    <!-- Project 3: Streaming Assistant -->
+    <div class="project-item" onclick="showProjectModal('streaming')">
+      <img src="streaming-assistant.png" alt="Streaming Assistant Project" class="project-logo">
+      <p>Streaming Assistant</p>
+    </div>
+  </div>
+
+  <!-- Project Modals -->
+  <div id="project-modal" class="project-modal d-none">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+      <div id="project-details">
+        <!-- Dynamic Content for Projects Goes Here -->
+      </div>
+    </div>
+  </div>
 </div>
 
-<!-- GPT Playground -->
+<!-- James's Console-->
 <div data-tab-target="gpt" class="d-none">
   <div class="my-5">
     <%= render 'shared/gpt_playground' %>

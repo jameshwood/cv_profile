@@ -42,10 +42,10 @@
 }
 
 
-.education-item:hover {
-  transform: scale(1.05);
-  background-color: #2d2d2d;
-}
+// .education-item:hover {
+//   transform: scale(1.05);
+//   background-color: #2d2d2d;
+// }
 
 
 .skills-grid {
@@ -64,10 +64,10 @@
   transition: transform 0.2s;
 }
 
-.skill-item:hover {
-  transform: scale(1.05);
-  background-color: #2d2d2d;
-}
+// .skill-item:hover {
+//   transform: scale(1.05);
+//   background-color: #2d2d2d;
+// }
 
 .skill-item img {
   width: 50px;
@@ -141,10 +141,10 @@
   max-height: fit-content;
 }
 
-.small-skill-item:hover {
-  transform: scale(1.05);
-  background-color: #2d2d2d;
-}
+// .small-skill-item:hover {
+//   transform: scale(1.05);
+//   background-color: #2d2d2d;
+// }
 
 .small-skill-item img {
   width: 50px;
@@ -167,3 +167,78 @@
     grid-template-columns: 1fr; /* Single column on mobile */
   }
 }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.project-item {
+  background-color: #1e1e1e;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #444;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+  background-color: #2d2d2d;
+}
+
+.project-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.project-item p {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  color: #dcdcdc;
+}
+
+.project-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 900px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.close-btn {
+  font-size: 2rem;
+  color: #dcdcdc;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.project-snapshot {
+  margin-bottom: 20px;
+}
+
+.project-snapshot img {
+  width: 100%;
+  border-radius: 8px;
+}
+

@@ -3,6 +3,7 @@
   <head>
     <title>CvProfile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -32,6 +33,16 @@
                 <a href="#" data-action="click->tabs#showTab" data-tab-id="education" class="nav-link text-white">Education</a>
               </li>
 
+              <!-- Tech Stack -->
+              <li>
+                <span class="nav-link text-white" data-action="click->tabs#toggleDropdown">Tech Stack & Skills</span>
+                <ul class="list-unstyled ms-3 d-none" data-tab-target="dropdown">
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="frontend" class="nav-link text-white">Frontend</a></li>
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="backend" class="nav-link text-white">Backend</a></li>
+                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="skills" class="nav-link text-white">Skills</a></li>
+                </ul>
+              </li>
+
               <!-- Experience Section -->
               <li>
                 <span class="nav-link text-white" data-action="click->tabs#toggleDropdown">Experience</span>
@@ -43,15 +54,7 @@
                 </ul>
               </li>
 
-              <!-- Tech Stack -->
-              <li>
-                <span class="nav-link text-white" data-action="click->tabs#toggleDropdown">Tech Stack & Skills</span>
-                <ul class="list-unstyled ms-3 d-none" data-tab-target="dropdown">
-                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="frontend" class="nav-link text-white">Frontend</a></li>
-                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="backend" class="nav-link text-white">Backend</a></li>
-                  <li><a href="#" data-action="click->tabs#showTab" data-tab-id="skills" class="nav-link text-white">Skills</a></li>
-                </ul>
-              </li>
+
 
               <!-- Projects -->
               <li>
