@@ -373,38 +373,39 @@
 </div>
 
 <!-- Projects -->
-<div data-tab-target="projects" class="d-none">
+<div data-tab-target="projects" class="d-none" data-controller="project-modal">
   <h3>// Projects</h3>
-  <div class="projects-grid">
+  <div class="projects-grid" >
     <!-- Project 1: Solar Farm Mapping System -->
-    <div class="project-item" onclick="showProjectModal('solar')">
+    <div class="project-item" data-action="click->project-modal#show" data-modal-id="solar">
       <img src="solar-farm.png" alt="Solar Farm Mapping" class="project-logo">
       <p>Solar Farm Mapping System</p>
     </div>
 
     <!-- Project 2: Pet Airbnb -->
-    <div class="project-item" onclick="showProjectModal('petbnb')">
+    <div class="project-item" data-action="click->project-modal#show" data-modal-id="petbnb">
       <img src="pet-airbnb.png" alt="Pet Rental Project" class="project-logo">
       <p>Petbnb - Pet Rental Platform</p>
     </div>
 
     <!-- Project 3: Streaming Assistant -->
-    <div class="project-item" onclick="showProjectModal('streaming')">
+    <div class="project-item" data-action="click->project-modal#show" data-modal-id="streaming">
       <img src="streaming-assistant.png" alt="Streaming Assistant Project" class="project-logo">
       <p>Streaming Assistant</p>
     </div>
   </div>
 
-  <!-- Project Modals -->
-  <div id="project-modal" class="project-modal d-none">
-    <div class="modal-content">
-      <span class="close-btn" onclick="closeProjectModal()">&times;</span>
+  <!-- Project Modal -->
+  <div id="project-modal" class="project-modal d-none" data-project-modal-target="modal">
+    <div class="modal-content" data-project-modal-target="modalContent">
+      <span class="close-btn" data-action="click->project-modal#close">&times;</span>
       <div id="project-details">
         <!-- Dynamic Content for Projects Goes Here -->
       </div>
     </div>
   </div>
 </div>
+
 
 <!-- James's Console-->
 <div data-tab-target="gpt" class="d-none">
