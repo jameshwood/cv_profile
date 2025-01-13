@@ -414,13 +414,38 @@
   </div>
 </div>
 
-<!-- Contact -->
 <div data-tab-target="contact" class="d-none">
   <h3>// Contact</h3>
-  <form>
-    <input type="text" placeholder="Name" class="form-control mb-3">
-    <input type="email" placeholder="Email" class="form-control mb-3">
-    <textarea placeholder="Message" class="form-control mb-3"></textarea>
-    <button class="btn btn-primary">Send</button>
-  </form>
+  <div class="contact-container">
+    <!-- Contact Form -->
+    <div class="contact-form-wrapper">
+      <%= simple_form_for :contact, url: contacts_path, method: :post, html: { class: 'contact-form' } do |f| %>
+        <div class="form-group">
+          <%= f.input :name, label: '_name:', placeholder: 'Enter your name', input_html: { class: 'console-input' } %>
+        </div>
+
+        <div class="form-group">
+          <%= f.input :email, label: '_email:', placeholder: 'Enter your email', input_html: { class: 'console-input' } %>
+        </div>
+
+        <div class="form-group">
+          <%= f.input :message, as: :text, label: '_message:', placeholder: 'Enter your message', input_html: { class: 'console-input' } %>
+        </div>
+
+        <%= f.button :submit, 'submit-message', class: 'console-button', id: 'sendBtn' %>
+      <% end %>
+    </div>
+
+    <!-- JSON Preview -->
+    <div class="json-preview-wrapper">
+      <pre id="jsonPreview" class="console-output">
+{
+  "name": "",
+  "email": "",
+  "message": "",
+  "date": ""
+}
+      </pre>
+    </div>
+  </div>
 </div>

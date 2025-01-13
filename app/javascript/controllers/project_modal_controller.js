@@ -42,8 +42,8 @@ export default class extends Controller {
       solar: {
         title: "Solar Farm Mapping System",
         snapshots: [
-          { img: "solar1.png", description: "Interface for identifying ideal solar farm locations." },
-          { img: "solar2.png", description: "Automated report generation using input coordinates." },
+          { img: "solar_1.png", description: "Interface for identifying ideal solar farm locations." },
+          { img: "solar_2.png", description: "Automated report generation using input coordinates." },
         ],
         details: [
           "Built pre-bootcamp using self-taught knowledge.",

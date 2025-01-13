@@ -4,6 +4,12 @@ Rails.application.routes.draw do
 
   post "/generate", to: "playgrounds#generate"
 
+  namespace :admin do
+    resources :contacts, only: [:index]
+  end
+
+  resources :contacts, only: [:new, :create]
+
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
