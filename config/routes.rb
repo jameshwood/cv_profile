@@ -11,6 +11,13 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
 
 
+  resources :projects, only: [] do
+    get "modal", on: :member
+  end
+
+
+
+
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
 

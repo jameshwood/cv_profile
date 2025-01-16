@@ -1,15 +1,62 @@
-.close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
+.modal-container {
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 900px;
+  margin: auto;
   color: #dcdcdc;
-  cursor: pointer;
-  outline: none;
 }
 
-.close-btn:hover {
-  color: #ff6b6b;
+.modal-title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.feature-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 20px;
+}
+
+/* Align text to the left and image to the right */
+.feature-group.text-left {
+  flex-direction: row;
+}
+
+/* Align text to the right and image to the left */
+.feature-group.text-right {
+  flex-direction: row-reverse;
+}
+
+.feature-text {
+  flex: 1;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.feature-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif-preview {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.close-btn {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 24px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
 }

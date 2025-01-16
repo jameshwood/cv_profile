@@ -1,0 +1,22 @@
+<div class="modal-container">
+  <h3 class="modal-title">Petbnb - Pet Rental Platform</h3>
+
+  <% petbnb_features = [
+    { text: "Browse listings with a map view to find pets to rent.", img: "petbnb1.gif", alt: "Pet Listings Map View" },
+    { text: "Check availability and book pets.", img: "petbnb2.gif", alt: "Pet Availability and Booking" },
+    { text: "Manage bookings and create new listings of your own pets.", img: "petbnb3.gif", alt: "Manage Bookings" }
+  ] %>
+
+  <% petbnb_features.each_with_index do |feature, index| %>
+    <div class="feature-group <%= index.even? ? 'text-left' : 'text-right' %>">
+      <div class="feature-text">
+        <p><%= feature[:text] %></p>
+      </div>
+      <div class="feature-image">
+        <%= image_tag feature[:img], alt: feature[:alt], class: "gif-preview" %>
+      </div>
+    </div>
+  <% end %>
+
+  <button class="close-btn" data-action="click->project-modal#close">✕</button>
+</div>

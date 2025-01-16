@@ -1,0 +1,20 @@
+<div class="modal-container">
+  <h3 class="modal-title">Solar Farm Mapping System</h3>
+  <% solar_features = [
+    { text: "Browse Datacentre locations on the map color-coded for power supply size.", img: "solar_1.png", alt: "Datacentre Map" },
+    { text: "Draw solar farms on the map and get sizes, number of panels, etc.", img: "solar_2.png", alt: "Solar Farm Drawing" }
+  ] %>
+
+  <% solar_features.each_with_index do |feature, index| %>
+    <div class="feature-group <%= index.even? ? 'text-left' : 'text-right' %>">
+      <div class="feature-text">
+        <p><%= feature[:text] %></p>
+      </div>
+      <div class="feature-image">
+        <%= image_tag feature[:img], alt: feature[:alt], class: "gif-preview" %>
+      </div>
+    </div>
+  <% end %>
+
+  <button class="close-btn" data-action="click->project-modal#close">✕</button>
+</div>

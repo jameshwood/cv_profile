@@ -1,0 +1,23 @@
+<div class="modal-container">
+  <h2 class="modal-title">Streaming Assistant</h2>
+  <% feature_groups = [
+    { text: "Select the streaming platforms you have.", img: "clip_1.gif", alt: "Streaming Platforms" },
+    { text: "Browse media by those platforms.", img: "clip_2.gif", alt: "Browse Media" },
+    { text: "Get detailed information on media items on cast, seasons reviews etc...", img: "clip_4.gif", alt: "Media Details" },
+    { text: "Add media to your watchlist and generate monthly watch schedules using our content ranking algorithm to help manage streaming platforms.", img: "clip_5.gif", alt: "Watch Scheduling  and Subscription Management" },
+    { text: "Browse media via our dating app like game to help discover in a more manageable way.", img: "clip_6.gif", alt: "Dating app like game" }
+  ] %>
+
+  <% feature_groups.each_with_index do |group, index| %>
+    <div class="feature-group <%= index.even? ? 'text-left' : 'text-right' %>">
+      <div class="feature-text">
+        <p><%= group[:text] %></p>
+      </div>
+      <div class="feature-image">
+        <%= image_tag group[:img], alt: group[:alt], class: "gif-preview" %>
+      </div>
+    </div>
+  <% end %>
+
+  <button class="close-btn" data-action="click->project-modal#close">✕</button>
+</div>

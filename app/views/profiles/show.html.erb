@@ -376,22 +376,20 @@
 <div data-tab-target="projects" class="d-none" data-controller="project-modal">
   <h3>// Projects</h3>
   <div class="projects-grid" >
-    <!-- Project 1: Solar Farm Mapping System -->
-    <div class="project-item" data-action="click->project-modal#show" data-modal-id="solar">
-      <img src="solar-farm.png" alt="Solar Farm Mapping" class="project-logo">
-      <p>Solar Farm Mapping System</p>
-    </div>
 
-    <!-- Project 2: Pet Airbnb -->
-    <div class="project-item" data-action="click->project-modal#show" data-modal-id="petbnb">
-      <img src="pet-airbnb.png" alt="Pet Rental Project" class="project-logo">
-      <p>Petbnb - Pet Rental Platform</p>
-    </div>
-
-    <!-- Project 3: Streaming Assistant -->
     <div class="project-item" data-action="click->project-modal#show" data-modal-id="streaming">
-      <img src="streaming-assistant.png" alt="Streaming Assistant Project" class="project-logo">
-      <p>Streaming Assistant</p>
+      <%= image_tag "streaming.jpeg", alt: "Streaming Assistant Project", class: "project-logo" %>
+      <p>StreamCaddy - Streaming Assistant</p>
+    </div>
+
+    <div class="project-item" data-action="click->project-modal#show" data-modal-id="petbnb">
+      <%= image_tag "rent_a_pet.png", alt: "Pet Rental Project" , class: "project-logo" %>
+      <p>Rent a Pet - Pet Rental Platform</p>
+    </div>
+
+    <div class="project-item" data-action="click->project-modal#show" data-modal-id="solar">
+      <%= image_tag "solar.png", alt: "Solar Farm Mapping" , class: "project-logo"%>
+      <p>Solar Farm Mapping System</p>
     </div>
   </div>
 
