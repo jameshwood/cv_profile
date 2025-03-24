@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'profiles/show'
   root to: "profiles#show"
 
+  get 'tech-stack', to: "pages#tech-stack"
+
   post "/generate", to: "playgrounds#generate"
 
   namespace :admin do
