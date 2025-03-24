@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   get 'profiles/show'
   root to: "profiles#show"
 
-  get 'tech-stack', to: "pages#tech-stack"
+  get 'skills-tech-stack', to: "pages#skills-tech-stack"
 
   post "/generate", to: "playgrounds#generate"
 
